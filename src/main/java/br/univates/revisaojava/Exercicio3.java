@@ -21,7 +21,7 @@ public class Exercicio3 {
         objConta1.agencia = 123;
         objConta1.conta = 444;
         objConta1.nome = "Juca Bala";
-        objConta1.saldo = 500;
+        objConta1.saldo = 200.99;
         objConta1.imprimir();
         
         Conta objConta2 = new Conta();    
@@ -29,13 +29,19 @@ public class Exercicio3 {
         objConta2.agencia = 900;
         objConta2.conta = 658;
         objConta2.nome = "Pedro Rocha";
-        objConta2.saldo = 500000;
+        objConta2.saldo = 980.65;
         objConta2.imprimir();
         
-        objConta1.transferirValor();
+        /*Transferencia de valor entre contas
+          Conta Origem para conta Destino 
+          Qual o valor?
+          A conta de origem fica sendo a conta do objeto em si
+        */
+        double valorTransf = 500.80;
+        objConta1.transferirValor(objConta2, valorTransf);
         
+        System.out.println("\nDEPOIS");
         objConta1.imprimir();
-        System.out.println("DEPOIS");
         objConta2.imprimir();
         
     
